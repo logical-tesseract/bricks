@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: sans-serif;
+}
+button.top {
+  font-size: 1.5em;
+}
+button.number {
+  font-size: 2em;
+  font-family: monospace;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+.title {
+  font-size: 2em;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.elem {
+  padding: 3px;
+  margin: 2px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #eee;
+  width: 93px;
+  min-height: 114px;
+}
+.count {
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888;
+  width: 80%;
+}
+.info {
+  padding-left: 100px;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.img {
+  position: relative;
+  display: block;
+  line-height: 1.3;
+}
+.img img {
+  margin-left: 0;
+  margin-top: 0;
+  float: left;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.img img.overlay {
+  transition: unset;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+input#count {
+  width: 3em;
+}
+</style>
+<title>60284-1-Roadwork Truck</title>
+</head>
+<body>
+  <div>
+    <div class="title">60284-1-Roadwork Truck</div>
+    <div class="options">
+      <button type="button" class="top" onclick="toggleview()">Show/hide</button>
+      <button type="button" class="top" id="resetbtn" onclick="resetall()">Reset</button>
+    </div>
+    <div class="content">
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="157"
+          data-part_name="Plate 1 x 4"
+          data-part_cat_name="Plates"
+          data-color_id="0"
+          data-color_name="Black"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/371026.jpg/85x85p.jpg?1658325724.9237823" width="85" height="85">
+          <img class="overlay" src="https://rebrickable.com/static/img/overlays/ov_4.png" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="43905"
+          data-part_name="Plate Special 2 x 2 x 2/3 with Axle Hole and Grill on Sides (Haybale)"
+          data-part_cat_name="Plates Special"
+          data-color_id="0"
+          data-color_name="Black"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6325254.jpg/85x85p.jpg?1658325886.8278081" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="7938"
+          data-part_name="Roll Cage 6 x 4 x 3 1/3"
+          data-part_cat_name="Transportation - Land"
+          data-color_id="0"
+          data-color_name="Black"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4539385.jpg/85x85p.jpg?1658326910.723925" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="40"
+          data-part_name="Tile Special 1 x 2 Grille with Bottom Groove"
+          data-part_cat_name="Tiles Special"
+          data-color_id="0"
+          data-color_name="Black"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/241226.jpg/85x85p.jpg?1658325756.8237877" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="2256"
+          data-part_name="Tyre 24 x 14 Shallow Tread (Tread Small Hub), Band Around Center of Tread"
+          data-part_cat_name="Wheels and Tyres"
+          data-color_id="0"
+          data-color_name="Black"
+          data-quantity="4"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4639695.jpg/85x85p.jpg?1658325802.2837954" width="85" height="85">
+        </div>
+        <div class="count">4</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="21537"
+          data-part_name="Vehicle Base, Brick Special 4 x 10 with 4 Pins"
+          data-part_cat_name="Transportation - Land"
+          data-color_id="0"
+          data-color_name="Black"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4144352.jpg/85x85p.jpg?1658329221.5799415" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="7028"
+          data-part_name="Hips and Blue Legs"
+          data-part_cat_name="Minifig Lower Body"
+          data-color_id="1"
+          data-color_name="Blue"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4583501.jpg/85x85p.jpg?1665857566.6379223" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="107"
+          data-part_name="Brick 1 x 3"
+          data-part_cat_name="Bricks"
+          data-color_id="72"
+          data-color_name="Dark Bluish Gray"
+          data-quantity="3"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4211104.jpg/85x85p.jpg?1658325766.0917892" width="85" height="85">
+        </div>
+        <div class="count">3</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="17132"
+          data-part_name="Equipment Shovel [Rounded Handle End]"
+          data-part_cat_name="Minifig Accessories"
+          data-color_id="72"
+          data-color_name="Dark Bluish Gray"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4211006.jpg/85x85p.jpg?1658326101.9078243" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="44209"
+          data-part_name="Slope 45° 2 x 2 with Vent/Grate Print"
+          data-part_cat_name="Bricks Sloped"
+          data-color_id="72"
+          data-color_name="Dark Bluish Gray"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6329592.jpg/85x85p.jpg?1658328535.1959493" width="85" height="85">
+          <img class="overlay" src="https://rebrickable.com/static/img/overlays/rare_color.png" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="1041"
+          data-part_name="Tile 2 x 4 with Groove"
+          data-part_cat_name="Tiles"
+          data-color_id="72"
+          data-color_name="Dark Bluish Gray"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4560184.jpg/85x85p.jpg?1658325763.8797889" width="85" height="85">
+          <img class="overlay" src="https://rebrickable.com/static/img/overlays/ov_4.png" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="351"
+          data-part_name="Wheel Arch, Mudguard 3 x 4 with 2 x 2 Plate"
+          data-part_cat_name="Transportation - Land"
+          data-color_id="72"
+          data-color_name="Dark Bluish Gray"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6178912.jpg/85x85p.jpg?1658327025.7639418" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="32139"
+          data-part_name="Animal, Rodent, Rat / Mouse with Black Eyes Print"
+          data-part_cat_name="Plants and Animals"
+          data-color_id="28"
+          data-color_name="Dark Tan"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6226594.jpg/85x85p.jpg?1658326655.6398892" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="147"
+          data-part_name="Brick 2 x 2"
+          data-part_cat_name="Bricks"
+          data-color_id="28"
+          data-color_name="Dark Tan"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4255416.jpg/85x85p.jpg?1658325762.5597887" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="24948"
+          data-part_name="Equipment Wheelbarrow"
+          data-part_cat_name="Minifig Accessories"
+          data-color_id="2"
+          data-color_name="Green"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6345794.jpg/85x85p.jpg?1658348374.872846" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="107"
+          data-part_name="Brick 1 x 3"
+          data-part_cat_name="Bricks"
+          data-color_id="71"
+          data-color_name="Light Bluish Gray"
+          data-quantity="3"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4211428.jpg/85x85p.jpg?1658325766.1237893" width="85" height="85">
+        </div>
+        <div class="count">3</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="21209"
+          data-part_name="Hinge Plate 2 x 2 Locking with 1 Finger on Top"
+          data-part_cat_name="Hinges, Arms and Turntables"
+          data-color_id="71"
+          data-color_name="Light Bluish Gray"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4666449.jpg/85x85p.jpg?1658325739.467785" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="41290"
+          data-part_name="Hinge Plate 3 x 4 Locking Dual 2 Finger, 7 teeth"
+          data-part_cat_name="Hinges, Arms and Turntables"
+          data-color_id="71"
+          data-color_name="Light Bluish Gray"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6266279.jpg/85x85p.jpg?1658331801.8003047" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="39802"
+          data-part_name="Wheel 14.4 mm with Bar"
+          data-part_cat_name="Wheels and Tyres"
+          data-color_id="71"
+          data-color_name="Light Bluish Gray"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6285598.jpg/85x85p.jpg?1658326838.3159146" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="3549"
+          data-part_name="Wheel 18 x 14 with Pin Hole, Fake Bolts and Shallow Spokes"
+          data-part_cat_name="Wheels and Tyres"
+          data-color_id="71"
+          data-color_name="Light Bluish Gray"
+          data-quantity="4"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4299119.jpg/85x85p.jpg?1658325810.0077968" width="85" height="85">
+        </div>
+        <div class="count">4</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="43247"
+          data-part_name="Torso Mechanic Blue Overalls, Tools in Pocket, Pen with Black Outline Print, Medium Blue Arms, Yellow Hands"
+          data-part_cat_name="Minifig Upper Body"
+          data-color_id="73"
+          data-color_name="Medium Blue"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6283869.jpg/85x85p.jpg?1658327756.9720533" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="914"
+          data-part_name="Cone 2 x 2 x 2 with Completely Open Stud"
+          data-part_cat_name="Bricks Round and Cones"
+          data-color_id="25"
+          data-color_name="Orange"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4213119.jpg/85x85p.jpg?1658326723.6638985" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="101"
+          data-part_name="Plate 2 x 2"
+          data-part_cat_name="Plates"
+          data-color_id="25"
+          data-color_name="Orange"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4159007.jpg/85x85p.jpg?1658325949.223812" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="29307"
+          data-part_name="Plate Special 2 x 2 with Only 2 studs"
+          data-part_cat_name="Plates Special"
+          data-color_id="4"
+          data-color_name="Red"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6219819.jpg/85x85p.jpg?1658325947.191812" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="24371"
+          data-part_name="Cone 1 x 1 [Top Groove]"
+          data-part_cat_name="Bricks Round and Cones"
+          data-color_id="182"
+          data-color_name="Trans-Orange"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4567338.jpg/85x85p.jpg?1658327102.1319532" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="2420"
+          data-part_name="Antenna 1 x 4 with Flat Top"
+          data-part_cat_name="Bars, Ladders and Fences"
+          data-color_id="15"
+          data-color_name="White"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/395701.jpg/85x85p.jpg?1658326415.067858" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="437"
+          data-part_name="Dish 2 x 2 Inverted [Radar]"
+          data-part_cat_name="Plates Round Curved and Dishes"
+          data-color_id="15"
+          data-color_name="White"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/474001.jpg/85x85p.jpg?1658326441.4638612" width="85" height="85">
+          <img class="overlay" src="https://rebrickable.com/static/img/overlays/ov_2.png" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="24450"
+          data-part_name="Helmet, Construction / Hard Hat"
+          data-part_cat_name="Minifig Headwear"
+          data-color_id="15"
+          data-color_name="White"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/383301.jpg/85x85p.jpg?1658328393.7319634" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="20754"
+          data-part_name="Plate Special 1 x 2 [Top Clip]"
+          data-part_cat_name="Plates Special"
+          data-color_id="15"
+          data-color_name="White"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4598527.jpg/85x85p.jpg?1658326493.1758678" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="44210"
+          data-part_name="Road Sign Clip-on 2.2 x 2.667 Triangular with Road Works Sign print"
+          data-part_cat_name="Flags, Signs, Plastics and Cloth"
+          data-color_id="15"
+          data-color_name="White"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6343342.jpg/85x85p.jpg?1658330899.3841925" width="85" height="85">
+          <img class="overlay" src="https://rebrickable.com/static/img/overlays/rare_color.png" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="159"
+          data-part_name="Brick 2 x 4"
+          data-part_cat_name="Bricks"
+          data-color_id="14"
+          data-color_name="Yellow"
+          data-quantity="3"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/300124.jpg/85x85p.jpg?1658325874.0838075" width="85" height="85">
+        </div>
+        <div class="count">3</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="44113"
+          data-part_name="Minifig Head, Trans-Orange Glasses Print"
+          data-part_cat_name="Minifig Heads"
+          data-color_id="14"
+          data-color_name="Yellow"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/6329589.jpg/85x85p.jpg?1658340214.052922" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="334"
+          data-part_name="Plate 2 x 3"
+          data-part_cat_name="Plates"
+          data-color_id="14"
+          data-color_name="Yellow"
+          data-quantity="2"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/302124.jpg/85x85p.jpg?1658325728.755783" width="85" height="85">
+        </div>
+        <div class="count">2</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="24475"
+          data-part_name="Slope Curved 4 x 1 Double with No Studs"
+          data-part_cat_name="Bricks Curved"
+          data-color_id="14"
+          data-color_name="Yellow"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/4613151.jpg/85x85p.jpg?1658325862.9678056" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="24315"
+          data-part_name="Steering Stand 1 x 2 with Black Steering Wheel"
+          data-part_cat_name="Transportation - Land"
+          data-color_id="14"
+          data-color_name="Yellow"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/9553.jpg/85x85p.jpg?1658325862.9678056" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+      <div class="elem" onclick="openModal(this)"
+          data-part_id="21290"
+          data-part_name="Tipper Bed Small, 3 x 4 Anti-studs"
+          data-part_cat_name="Transportation - Land"
+          data-color_id="14"
+          data-color_name="Yellow"
+          data-quantity="1"
+        >
+        <div class="img">
+          <img src="https://cdn.rebrickable.com/media/thumbs/parts/elements/251224.jpg/85x85p.jpg?1681501760.930934" width="85" height="85">
+        </div>
+        <div class="count">1</div>
+      </div>
+
+    </div>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="img-parent">
+        <div class="img">
+        </div>
+      </div>
+      <div class="info">
+        <table>
+          <tr>
+            <td class="label">ID:</td>
+            <td class="val"><span id="part_id"></span></td>
+          </tr>
+          <tr>
+            <td class="label">Name:</td>
+            <td class="val"><span id="part_name"></span></td>
+          </tr>
+          <tr>
+            <td class="label">Category:</td>
+            <td class="val"><span id="part_cat_name"></span></td>
+          </tr>
+          <tr>
+            <td class="label">Color:</td>
+            <td class="val"><span id="color_id"></span> - <span id="color_name"></span></td>
+          </tr>
+          <tr>
+            <td class="label">Count:</td>
+            <td class="value"><input type="number" max="999" id="count" name="count" value=""> / <span id="quantity"></span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="actions">
+        <button type="button" class="number" onclick="zero()">0</button>
+        <button type="button" class="number" onclick="dec()">-</button>
+        <button type="button" class="number" onclick="inc()">+</button>
+      </div>
+    </div>
+  </div>
+<script>
+var modal = document.getElementById('modal');
+var span = document.getElementsByClassName('close')[0];
+var cur = null;
+var toggle = 'hide';
+
+function init() {
+  document.getElementById('resetbtn').style.display = 'none';
+  var elems = document.getElementsByClassName('elem');
+  for (let i = 0; i < elems.length; i++) {
+    var e = elems[i];
+    var id = e.dataset.part_id + '-' + e.dataset.color_id;
+    var cnt = localStorage.getItem(id);
+    if (cnt !== null) {
+      e.getElementsByClassName('count')[0].innerText = cnt;
+      if (toggle == 'hide' && cnt == 0) {
+        e.style.display = 'none';
+      }
+    } else {
+      e.getElementsByClassName('count')[0].innerText = e.dataset.quantity;
+      e.style.display = 'block';
+    }
+  }
+  if (isDone()) {
+    document.getElementById('resetbtn').style.display = 'inline-block';
+  } else {
+    document.getElementById('resetbtn').style.display = 'none';
+  }
+}
+
+init();
+
+function openModal(elem) {
+  document.getElementById('img-parent').getElementsByClassName('img')[0].innerHTML = elem.getElementsByClassName('img')[0].getHTML();
+  document.getElementById('part_id').innerText = elem.dataset.part_id;
+  document.getElementById('part_name').innerText = elem.dataset.part_name;
+  document.getElementById('part_cat_name').innerText = elem.dataset.part_cat_name;
+  document.getElementById('color_id').innerText = elem.dataset.color_id;
+  document.getElementById('color_name').innerText = elem.dataset.color_name;
+  document.getElementById('quantity').innerText = elem.dataset.quantity;
+  document.getElementById('count').value = elem.getElementsByClassName('count')[0].innerText;
+  cur = elem;
+  modal.style.display = 'block';
+}
+
+function isDone() {
+    var elems = document.getElementsByClassName('count');
+    for (let i = 0; i < elems.length; i++) {
+        if (elems[i].innerText == 0) {
+            continue;
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
+
+function toggleview() {
+    var elems = document.getElementsByClassName('elem');
+    if (toggle == 'hide') {
+        toggle = 'show';
+        for (let i = 0; i < elems.length; i++) {
+          elems[i].style.display = 'block';
+        }
+    } else {
+        toggle = 'hide';
+        for (let i = 0; i < elems.length; i++) {
+            var cnt = elems[i].getElementsByClassName('count')[0].innerText;
+            if (cnt == 0) {
+              elems[i].style.display = 'none';
+            }
+        }
+    }
+}
+function zero() {
+  document.getElementById('count').value = 0;
+  closemodal();
+}
+function inc() {
+  document.getElementById('count').value++;
+}
+function dec() {
+  document.getElementById('count').value--;
+}
+function closemodal() {
+  var cnt = document.getElementById('count').value;
+  cur.getElementsByClassName('count')[0].innerText = cnt;
+  var id = cur.dataset.part_id + '-' + cur.dataset.color_id;
+  localStorage.setItem(id, cnt);
+  if (toggle == 'hide' && cnt == 0) {
+    cur.style.display = 'none';
+  }
+  modal.style.display = 'none';
+  if (isDone()) {
+    document.getElementById('resetbtn').style.display = 'inline-block';
+  } else {
+    document.getElementById('resetbtn').style.display = 'none';
+  }
+}
+span.onclick = function() {
+    closemodal();
+}
+
+function resetall() {
+  localStorage.clear();
+  init();
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      closemodal();
+    }
+}
+</script>
+</body>
+</html>
+

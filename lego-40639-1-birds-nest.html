@@ -102,12 +102,14 @@ input#count {
   width: 3em;
 }
 </style>
+<title>40639-1-Bird's Nest</title>
 </head>
 <body>
   <div>
-    <div class="title">Bird's Nest</div>
+    <div class="title">40639-1-Bird's Nest</div>
     <div class="options">
       <button type="button" class="top" onclick="toggleview()">Show/hide</button>
+      <button type="button" class="top" id="resetbtn" onclick="resetall()">Reset</button>
     </div>
     <div class="content">
       <div class="elem" onclick="openModal(this)"
@@ -1307,6 +1309,7 @@ var cur = null;
 var toggle = 'hide';
 
 function init() {
+  document.getElementById('resetbtn').style.display = 'none';
   var elems = document.getElementsByClassName('elem');
   for (let i = 0; i < elems.length; i++) {
     var e = elems[i];
@@ -1317,7 +1320,15 @@ function init() {
       if (toggle == 'hide' && cnt == 0) {
         e.style.display = 'none';
       }
+    } else {
+      e.getElementsByClassName('count')[0].innerText = e.dataset.quantity;
+      e.style.display = 'block';
     }
+  }
+  if (isDone()) {
+    document.getElementById('resetbtn').style.display = 'inline-block';
+  } else {
+    document.getElementById('resetbtn').style.display = 'none';
   }
 }
 
@@ -1336,6 +1347,17 @@ function openModal(elem) {
   modal.style.display = 'block';
 }
 
+function isDone() {
+    var elems = document.getElementsByClassName('count');
+    for (let i = 0; i < elems.length; i++) {
+        if (elems[i].innerText == 0) {
+            continue;
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
 
 function toggleview() {
     var elems = document.getElementsByClassName('elem');
@@ -1373,9 +1395,19 @@ function closemodal() {
     cur.style.display = 'none';
   }
   modal.style.display = 'none';
+  if (isDone()) {
+    document.getElementById('resetbtn').style.display = 'inline-block';
+  } else {
+    document.getElementById('resetbtn').style.display = 'none';
+  }
 }
 span.onclick = function() {
     closemodal();
+}
+
+function resetall() {
+  localStorage.clear();
+  init();
 }
 
 window.onclick = function(event) {
